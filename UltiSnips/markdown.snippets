@@ -1,0 +1,22 @@
+snippet prot "kgr protocol"
+---
+documentclass: protocol
+...
+\date{`!v strftime("%d.%m.%Y")`}
+\band{XII}
+\setcounter{sheetnum}{$2}
+\etv{${3:7}}{${4:5}}{${5:2}}
+\excused{$6}
+\visitors{$7}
+
+# Öffentlicher Teil
+
+$8
+
+\sign
+endsnippet
+
+snippet req "a simple request"
+\req{Ich stelle den Antrag, dass ${1:das Protokoll vom  angenommen wird.}}{${2:Pfarrer Maisenbacher}}{${3:7}}{${4:0}}{${5:0}}
+endsnippet
+
