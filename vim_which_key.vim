@@ -3,7 +3,7 @@ let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 let g:which_key_map = {}
 let g:which_key_use_floating_win = 0
-set timeoutlen=100
+set timeoutlen=0
 autocmd! FileType which_key
 autocmd FileType which_key set laststatus=0 noshowmode noruler
       \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
@@ -59,6 +59,7 @@ let g:which_key_map.g = {
 " w for window
 let g:which_key_map.w = {
       \ 'name' : '+window',
+      \ 'w': [':Windows', 'change window'],
       \ 'h': ['<C-w>h', 'select left'],
       \ 'j': ['<C-w>j', 'select down'],
       \ 'k': ['<C-w>k', 'select up'],
@@ -94,6 +95,13 @@ let g:which_key_map.c = {
       \ 's': [':call NERDComment(0, "Sexy")', 'sexy'],
       \ 'u': [':call NERDComment(0, "Uncomment")', 'unkomment'],
       \ 'y': [':call NERDComment(0, "Yank")', 'yank'],
+      \}
+
+" p for project
+let g:which_key_map.p = {
+      \ 'name' : '+project',
+      \ 'p': [':Projex fzf', 'open project'],
+      \ 'e': [':Projex open_project_list', 'edit project list'],
       \}
 
 " register which key map

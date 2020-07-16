@@ -18,4 +18,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdcommenter'
+  " Colorschemes
+  Plug 'morhetz/gruvbox'
 call plug#end()

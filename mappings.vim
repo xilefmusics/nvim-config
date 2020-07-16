@@ -21,4 +21,4 @@ nnoremap <C-j> :m +1<CR>gv=gv
 nnoremap <C-k> :m -2<CR>gv=gv
 
 " ESC in terminal
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-t> <C-\><C-n>
