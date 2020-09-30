@@ -1,5 +1,6 @@
 let mapleader = ' '
 autocmd! bufwritepost init.vim source % " autmoatically source init.vim
+autocmd! bufwritepost xession.vim source % " autmoatically source init.vim
 autocmd BufWritePre * %s/\s\+$//e " delete trailing whitespaces
 set number relativenumber " linenumbers
 set ts=2 sw=2 expandtab " use 2 spaces instead of 1 tab

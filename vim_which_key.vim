@@ -22,8 +22,17 @@ let g:which_key_map['y'] = [':Filetypes', 'change filetype']
 let g:which_key_map['B'] = [':call Build()', 'build']
 let g:which_key_map['O'] = [':call Open()', 'open external']
 let g:which_key_map['C'] = [':call Clean()', 'clean']
-let g:which_key_map['t'] = [':call Terminal()', 'bottom terminal']
-let g:which_key_map['T'] = [':term', 'terminal']
+"let g:which_key_map['t'] = [':call Terminal()', 'bottom terminal']
+"let g:which_key_map['T'] = [':term', 'terminal']
+"
+" a for thesis
+let g:which_key_map.a = {
+      \ 'name' : '+thesis',
+      \ 'a': [':Thesis edit', 'edit pdf'],
+      \ 'b': [':Thesis build', 'build pdf'],
+      \ 'r': [':Thesis buildr', 'build pdf with references'],
+      \ 'o': [':Thesis open', 'open pdf'],
+      \}
 
 " f for files
 let g:which_key_map.f = {
@@ -102,6 +111,27 @@ let g:which_key_map.p = {
       \ 'name' : '+project',
       \ 'p': [':Projex fzf', 'open project'],
       \ 'e': [':Projex open_project_list', 'edit project list'],
+      \}
+
+" j for jump
+let g:which_key_map.j = {
+      \ 'name' : '+jump',
+      \ 'f': [':Xump file_under_cursor', 'jump to file under cursor'],
+      \ 'b': ['<C-o>', 'jump back'],
+      \ 'l': [':BLines', 'jump to line'],
+      \ 't': [':BTags', 'jump to tag'],
+      \}
+
+" t for terminal
+let g:which_key_map.t = {
+      \ 'name' : '+terminal',
+      \ 't': [':FloatermToggle', 'toggle terminal'],
+      \ 'N': [':FloatermNew', 'new terminal'],
+      \ 'l': [':FloatermNew --height=0.8 lf', 'run lf'],
+      \ 'g': [':FloatermNew --height=0.8 lazygit', 'run lazygit'],
+      \ 'n': [':FloatermNext', 'next terminal'],
+      \ 'p': [':FloatermPrev', 'previous terminal'],
+      \ 'k': [':FloatermKill', 'kill terminal'],
       \}
 
 " register which key map

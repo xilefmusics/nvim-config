@@ -20,4 +20,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'preservim/nerdcommenter'
   " Colorschemes
   Plug 'morhetz/gruvbox'
+  " Terminal
+  Plug 'voldikss/vim-floaterm'
 call plug#end()

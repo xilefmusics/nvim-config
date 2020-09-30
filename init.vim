@@ -2,9 +2,13 @@ source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/terminal.vim
 source $HOME/.config/nvim/fzf.vim
+source $HOME/.config/nvim/floaterm.vim
 source $HOME/.config/nvim/deoplete.vim
-source $HOME/.config/nvim/vim_which_key.vim
 source $HOME/.config/nvim/build.vim
+source $HOME/.config/nvim/xump.vim
+source $HOME/.config/nvim/xession.vim
 source $HOME/.config/nvim/projex.vim
+source $HOME/.config/nvim/thesis.vim
+source $HOME/.config/nvim/vim_which_key.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/apperance.vim

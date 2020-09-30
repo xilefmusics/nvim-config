@@ -11,7 +11,7 @@ endfunction
 function! s:projex_load_project(project)
   exe "cd " . a:project[0]
   if a:project[1] == "-"
-    exe "Files"
+    exe "edit " . a:project[0]
   else
     exe "edit " . a:project[1]
   endif
@@ -47,7 +47,7 @@ function s:projex(command)
   elseif a:command == "open_project_list"
     exe "edit " . s:projex_path_to_Projex . "project_list"
   else
-    echom("ERROR: projex doesn't know thhe command: " . a:command)
+    echom("ERROR: projex doesn't know the command: " . a:command)
   endif
 endfunction
 
