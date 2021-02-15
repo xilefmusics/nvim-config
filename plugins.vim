@@ -11,6 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -18,8 +19,12 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdcommenter'
+  Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'AndrewRadev/sideways.vim'
   " Colorschemes
   Plug 'morhetz/gruvbox'
   " Terminal
   Plug 'voldikss/vim-floaterm'
+  " Rust
+  Plug 'rust-lang/rust.vim'
 call plug#end()

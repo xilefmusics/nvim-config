@@ -5,6 +5,11 @@ function! s:edit_thesis()
   exe 'edit main.tex'
 endfunction
 
+function! s:edit_thesis_framework()
+  exe 'cd ' . s:thesis_path . '../framework'
+  exe 'edit main.cpp'
+endfunction
+
 function! s:build_thesis()
   let l:command = 'pdflatex ' . s:thesis_path . "main.tex"
   let l:response = system(l:command)
@@ -25,7 +30,7 @@ endfunction
 
 function s:clean_thesis()
   exe 'cd ' . s:thesis_path
-  let l:command = 'rm main.lof main.toc main.out main.idx main.bcf main.lot main.log main.blg main.alg main.code main.pytxcode main.run.xml main.thm main.wrt main.bbl main.tex.bbl main.tex.blg main.aux texput.log'
+  let l:command = 'rm main.lof main.toc main.out main.idx main.bcf main.lot main.log main.blg main.alg main.code main.pytxcode main.run.xml main.thm main.wrt main.bbl main.tex.bbl main.tex.blg main.aux *.log'
   let l:response = system(l:command)
 endfunction
 
@@ -38,6 +43,8 @@ function! s:thesis(command)
     call s:open_thesis()
   elseif a:command == 'edit'
     call s:edit_thesis()
+  elseif a:command == 'edit_framework'
+    call s:edit_thesis_framework()
   elseif a:command == 'clean'
     call s:clean_thesis()
   else

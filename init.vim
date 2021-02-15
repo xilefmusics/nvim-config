@@ -3,6 +3,7 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/terminal.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/floaterm.vim
+source $HOME/.config/nvim/coc.vim
 source $HOME/.config/nvim/deoplete.vim
 source $HOME/.config/nvim/build.vim
 source $HOME/.config/nvim/xump.vim

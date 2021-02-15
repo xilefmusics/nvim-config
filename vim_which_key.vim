@@ -20,6 +20,7 @@ let g:which_key_map[' '] = [':Commands', 'commands']
 let g:which_key_map['/'] = [':Rg', 'global search (RG)']
 let g:which_key_map['y'] = [':Filetypes', 'change filetype']
 let g:which_key_map['B'] = [':call Build()', 'build']
+let g:which_key_map['T'] = [':call Test()', 'test']
 let g:which_key_map['O'] = [':call Open()', 'open external']
 let g:which_key_map['C'] = [':call Clean()', 'clean']
 "let g:which_key_map['t'] = [':call Terminal()', 'bottom terminal']
@@ -32,6 +33,8 @@ let g:which_key_map.a = {
       \ 'b': [':Thesis build', 'build pdf'],
       \ 'r': [':Thesis buildr', 'build pdf with references'],
       \ 'o': [':Thesis open', 'open pdf'],
+      \ 'c': [':Thesis clean', 'clean except tex and pdf'],
+      \ 'f': [':Thesis edit_framework', 'edit framework'],
       \}
 
 " f for files
@@ -118,20 +121,42 @@ let g:which_key_map.j = {
       \ 'name' : '+jump',
       \ 'f': [':Xump file_under_cursor', 'jump to file under cursor'],
       \ 'b': ['<C-o>', 'jump back'],
+      \ 'n': ['<C-i>', 'jump forward'],
       \ 'l': [':BLines', 'jump to line'],
       \ 't': [':BTags', 'jump to tag'],
+      \ 'd': [':call CocAction("jumpDefinition")', 'jump to definition'],
+      \ 'i': [':call CocAction("jumpImplementation")', 'jump to definition'],
+      \ 'r': [':call CocAction("jumpReferences")', 'jump to references'],
       \}
 
 " t for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal',
-      \ 't': [':FloatermToggle', 'toggle terminal'],
-      \ 'N': [':FloatermNew', 'new terminal'],
+      \ 't': [':terminal', 'terminal'],
       \ 'l': [':FloatermNew --height=0.8 lf', 'run lf'],
       \ 'g': [':FloatermNew --height=0.8 lazygit', 'run lazygit'],
-      \ 'n': [':FloatermNext', 'next terminal'],
-      \ 'p': [':FloatermPrev', 'previous terminal'],
-      \ 'k': [':FloatermKill', 'kill terminal'],
+      \}
+
+" r for rust
+let g:which_key_map.r = {
+      \ 'name' : '+rust',
+      \ 'f': [':RustFmt', 'format code'],
+      \ 't': [':RustTest', 'run test under cursor'],
+      \ 'p': [':RustPlay', 'send to playground'],
+      \ 'd': [':CocCommand rust-analyzer.openDocs', 'open docs'],
+      \ 'c': [':CocCommand rust-analyzer.openCargoToml', 'open cargo toml'],
+      \}
+
+let g:which_key_map.d = {
+      \ 'name' : '+do',
+      \ 's': [':SplitjoinSplit', 'split code'],
+      \ 'j': [':SplitjoinJoin', 'join code'],
+      \ 'l': [':SidewaysLeft', 'move left'],
+      \ 'r': [':SidewaysRight', 'move right'],
+      \ 'i': ['<Plug>SidewaysArgumentInsertBefore', 'insert argument'],
+      \ 'a': ['<Plug>SidewaysArgumentAppendAfter', 'append argument'],
+      \ 'I': ['<Plug>SidewaysArgumentInsertFirst', 'insert first argument'],
+      \ 'A': ['<Plug>SidewaysArgumentAppendLast', 'append last argument'],
       \}
 
 " register which key map

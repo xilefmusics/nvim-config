@@ -11,6 +11,8 @@ function! Build()
     exec winheight(0)/4."split" | terminal sh %
   elseif (&ft=='c' ||  &ft=='h' || &ft=='cpp' || &ft=='hpp')
     exec winheight(0)/4."split" | terminal make run
+  elseif (&ft=='rust')
+    exec winheight(0)/4."split" | terminal cargo run
   else
     echom('no build function specified for this filetype')
   endif
@@ -42,5 +44,13 @@ function! Clean()
     exec winheight(0)/4."split" | terminal make clean
   else
     echom('no clean function specified for this filetype')
+  endif
+endfunction
+
+function! Test()
+  if (&ft=='rust')
+    exec winheight(0)/4."split" | terminal cargo test
+  else
+    echom('no test function specified for this filetype')
   endif
 endfunction
