@@ -21,10 +21,15 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'preservim/nerdcommenter'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'AndrewRadev/sideways.vim'
+  " Show marks
+  Plug 'kshenoy/vim-signature'
   " Colorschemes
   Plug 'morhetz/gruvbox'
   " Terminal
   Plug 'voldikss/vim-floaterm'
   " Rust
   Plug 'rust-lang/rust.vim'
+  " Web
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'chemzqm/vim-jsx-improve'
 call plug#end()

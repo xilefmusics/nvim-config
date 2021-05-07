@@ -13,3 +13,6 @@ source $HOME/.config/nvim/thesis.vim
 source $HOME/.config/nvim/vim_which_key.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/apperance.vim
+source $HOME/.config/nvim/prettier.vim
+source $HOME/.config/nvim/rust.vim
+source $HOME/.config/nvim/utilsnippet.vim
