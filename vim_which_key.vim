@@ -134,6 +134,7 @@ let g:which_key_map.t = {
       \ 'name' : '+terminal',
       \ 't': [':terminal', 'terminal'],
       \ 'l': [':FloatermNew --height=0.8 lf', 'run lf'],
+      \ 'r': [':FloatermNew --height=0.8 lf', 'run ranger'],
       \ 'g': [':FloatermNew --height=0.8 lazygit', 'run lazygit'],
       \}
 
