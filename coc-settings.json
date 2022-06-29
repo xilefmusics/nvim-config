@@ -1,4 +1,0 @@
-{
-  "rust-analyzer.inlayHints.chainingHints": false,
-  "rust-analyzer.inlayHints.typeHints": false,
-}
