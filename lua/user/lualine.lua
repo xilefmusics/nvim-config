@@ -92,3 +92,5 @@ lualine.setup({
   tabline = {},
   extensions = {},
 })
+
+vim.cmd "colorscheme gruvbox"
