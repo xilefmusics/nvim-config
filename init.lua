@@ -45,7 +45,7 @@ vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboar
 
 -- colors
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
-vim.cmd "colorscheme gruvbox" -- sets the colorscheme
+pcall(vim.cmd "colorscheme gruvbox") -- sets the colorscheme
 
 -- linenumbers
 vim.opt.number = true -- set numbered lines
