@@ -1,19 +1,27 @@
 -- TODO
--- multiline
+-- [x] multiline
 -- [x] cmp
 -- [x] comments
 -- [x] builds
 -- [x] autopairs
 -- [x] surround
--- test diff
--- kubectl integration
--- multiple terminals
--- autoformatting
--- hadolint
--- shellcheck
--- splits, buffers, windows
--- lsp
--- treesitter
+-- [x] Kubectl integration
+-- [x] Shellcheck
+-- [x] Autoformatting
+-- [x] Hadolint
+-- [x] project integration
+-- [ ] test diff
+-- [ ] Multiple terminals
+-- [ ] Splits, buffers, windows
+-- [ ] Lsp
+-- [ ] Treesitter
+
+-- [ ] install shellchek in docker
+-- [ ] install hadolint in docker
+-- [ ] install aws cli in docker [ ] install plugins automatically
+-- [ ] install language servers automatically
+-- [ ] npm install -g dockerfile-language-server-nodejs
+-- [] setup recent projects
 
 require "user.helper"
 require "user.build"
@@ -24,8 +32,10 @@ require "user.gitsigns"
 require "user.terminal"
 require "user.keys"
 require "user.comment"
-require "user.plugins"
 require "user.autopairs"
+require "user.project"
+require "user.nvim-tree"
+require "user.plugins"
 
 -- split
 vim.opt.splitbelow = true -- force all horizontal splits to go below current window

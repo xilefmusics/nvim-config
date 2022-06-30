@@ -38,6 +38,45 @@ local build_config = {
       toggle = 'no',
     },
   },
+  {
+    filetype = 'yaml',
+    build = {
+      cmd = 'kubectl apply -f %',
+      show = 'error',
+      toggle = 'no',
+    },
+    complexBuild = {
+      cmd = 'helm upgrade --install . abc',
+      show = 'error',
+      toggle = 'no',
+    },
+  },
+  {
+    filetype = 'sh',
+    build = {
+      cmd = 'bash -c %',
+      show = 'always',
+      toggle = 'yes',
+    },
+    complexBuild = {
+      cmd = 'bash -c %',
+      show = 'error',
+      toggle = 'no',
+    },
+  },
+  {
+    filetype = 'dockerfile',
+    build = {
+      cmd = 'hadolint %',
+      show = 'always',
+      toggle = 'yes',
+    },
+    complexBuild = {
+      cmd = 'hadolint %',
+      show = 'error',
+      toggle = 'no',
+    },
+  },
 }
 function Build()
   for _, config in ipairs(build_config) do

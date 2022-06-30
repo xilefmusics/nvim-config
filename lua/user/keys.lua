@@ -7,6 +7,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 keymap("n", "<Space>", "<Nop>", opts)
 
+-- nvim tree
+keymap("n", "<c-e>", "<cmd>NvimTreeFocus<cr>", opts)
+
 -- move mappings
 keymap("n", "gb", "<C-o>", opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -35,7 +38,7 @@ local opts2 = {
 }
 
 local mappings = {
-  p = {
+  P = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -114,6 +117,19 @@ local mappings = {
     B = { '<cmd>lua ComplexBuild()<cr>', "Complex Build" },
     T = { '<cmd>lua ToggleComplexBuild()<cr>', "Toggle Complex Build" },
   },
+  s = {
+    name = "Split",
+    s = { '<cmd>split<cr>', "Split" },
+    S = { '<cmd>split<cr><cmd>Telescope find_files theme=ivy<cr>', "Split" },
+    v = { '<cmd>vsplit<cr>', "Vertical Split" },
+    V = { '<cmd>vsplit<cr><cmd>Telescope find_files theme=ivy<cr>', "Vertical Split" },
+    t = { '<cmd>split<cr><cmd>term<cr><cmd>', "Terminal" },
+    T = { '<cmd>vsplit<cr><cmd>term<cr><cmd>', "Vertical Terminal" },
+  },
+  p = {
+    name = "Project",
+    p = { "<cmd>Telescope projects theme=ivy<cr>", "File" },
+  }
 }
 
 which_key.setup()
